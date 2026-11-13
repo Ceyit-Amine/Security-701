@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security+ SY0-701 — 90-Question Mock Exam</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Security+ SY0-701</h1>
+      <p class="subtitle">90-Question Mock Exam &mdash; CompTIA Security+</p>
+    </header>
+
+    <!-- Start screen -->
+    <section id="start-screen" class="card">
+      <h2>Ready?</h2>
+      <p>90 multiple-choice questions covering all 5 SY0-701 domains, weighted like the real exam.</p>
+      <ul>
+        <li>Domain 1 &mdash; General Security Concepts: 11 questions</li>
+        <li>Domain 2 &mdash; Threats, Vulnerabilities and Mitigations: 20 questions</li>
+        <li>Domain 3 &mdash; Security Architecture: 16 questions</li>
+        <li>Domain 4 &mdash; Security Operations: 25 questions</li>
+        <li>Domain 5 &mdash; Program Management and Oversight: 18 questions</li>
+      </ul>
+      <p>Pick an answer and you get immediate feedback: green for correct, red for wrong (with the correct answer shown in green), plus a short explanation.</p>
+      <p><strong>Pass guide:</strong> 72 or more out of 90 is around pass level.</p>
+      <button id="start-btn" class="btn primary">Start the quiz</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" class="card hidden">
+      <div class="top-row">
+        <span id="question-counter">Question 1 of 90</span>
+        <span id="score-display">Score: 0</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <p id="domain-label" class="domain-label"></p>
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+      <div id="explanation" class="explanation hidden"></div>
+      <button id="next-btn" class="btn primary hidden">Next</button>
+    </section>
+
+    <!-- Results screen -->
+    <section id="results-screen" class="card hidden">
+      <h2>Results</h2>
+      <p id="final-score" class="final-score"></p>
+      <p id="final-percent"></p>
+      <p id="pass-message"></p>
+      <h3>Per-domain breakdown</h3>
+      <div id="domain-breakdown"></div>
+      <h3>Questions to review</h3>
+      <div id="wrong-list"></div>
+      <button id="restart-btn" class="btn primary">Restart quiz</button>
+    </section>
+
+    <footer>
+      <p>Practice questions written from the official SY0-701 objectives. No login, no data sent anywhere.</p>
+    </footer>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
